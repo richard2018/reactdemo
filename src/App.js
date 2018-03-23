@@ -24,20 +24,20 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
 		<p className="App-intro">
-		<List list={[{text:'ddd1', checked: false}, {text:'ddd2', checked: true}]} handleItemChange = {this.handleItemChange.bind('d')}/>
-		<input type='button' onClick={this.clickTest.bind('a00', 'b11')} value='1000'/>
+		<List list={[{text:'ddd1', checked: false}, {text:'ddd2', checked: true}]} handleItemChange = {this.handleItemChange.bind('d', 100,200)}/>
+		<input type='button' onClick={this.clickTest.bind('a1','b1','c1')} value='1000'/>
 		</p>
       </div>
     );
   }
-  handleItemChange(a,b) {
+  handleItemChange(a,b, c,d) {
 	  debugger
 	  console.warn(this +' , handleItemChange.... App ... a: ' + a + ', b : ' + b);
 	  console.warn('xxxx')
   }
-  clickTest(a, b, d) {
+  clickTest(a,b) {
 	  debugger
-	  console.warn('clickTest.....a : ' + a + ' , b: ' + b + ', d : ' + d);
+	  // console.warn('clickTest.....a : ' + a + ' , b: ' + b + ', d : ' + d);
   }
 }
 
